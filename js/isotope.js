@@ -39,11 +39,13 @@ $( document ).ready( function() {
     $container.isotope({ filter: filterValue });
   });
 
+  /*
   // bind sort button click
   $('#sorts').on( 'click', 'button', function() {
     var sortByValue = $(this).attr('data-sort-by');
     $container.isotope({ sortBy: sortByValue });
   });
+  */
   
   // change is-checked class on buttons
   $('.button-group').each( function( i, buttonGroup ) {
