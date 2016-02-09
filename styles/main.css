@@ -1,7 +1,16 @@
+/* general page styling */
+
 body {
     font-family: helvetica, sans-serif;
     /*background-image: url('../images/concrete_seamless.png');
     background-repeat: repeat;*/
+}
+
+p {
+  font-size: 1em;
+}
+em {
+  font-style: italic;
 }
 
 a {
@@ -19,13 +28,22 @@ a {
 
 a:hover {
     padding-bottom: 5px;
-    border-bottom: 4px solid #000;
+    border-bottom: 4px solid #28b6e4;
+
 }
 
 a.current {
     padding-bottom: 5px;
-    border-bottom: 4px solid #000;
+    border-bottom: 4px solid #28b6e4;
 }
+
+.page-title {
+  font-family: 'Raleway', helvetica, sans-serif;
+  font-size: 4em;
+  text-align: center;
+}
+
+/* nav bar styling */
 nav {
     height: 105px;
     width: auto;
@@ -50,19 +68,25 @@ nav li {
     font-weight:700;
 }
 
+/*
+footer styling 
+footer {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0;
+  bottom: 15px;
+  border-top: 0.5px solid #000;
+  text-align: center;
+  
+}
+*/
+
 /* begin isotope image grid filter styling */
  * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
-.page-title {
-  font-family: 'Raleway', helvetica, sans-serif;
-  font-size: 4em;
-  text-align: center;
-}
-
 
 /* ---- button ---- */
 
@@ -73,28 +97,23 @@ nav li {
   color: #000;
   font-size: 16px;
   cursor: pointer;
+  outline: 0;
 }
 
+
+/*
 .button:hover {
-  background-color: none;
-/*  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);*/
-  color: #222;
+  border-radius: 3px;
+  opacity: 0.8;
+  color: #28b6e4;
 }
+*/
 
-.button:active,
-.button.is-checked {
-  background-color: clear;
-  border: transparent;
-}
 
 .button.is-checked {
-  color: #000;
-/*  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);*/
+  color: #28b6e4;
 }
 
-.button:active {
-/*  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);*/
-}
 
 /* ---- button-group ---- */
 
@@ -103,25 +122,6 @@ nav li {
 /*  margin-top: 10px;*/
 /*  padding: 0 20px 0 20px; */
 }
-
-/*
-.button-group:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.button-group .button {
-  float: left;
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 1px;
-}
-
-.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
-.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
-
-*/
 
 /* ---- isotope ---- */
 
@@ -151,34 +151,31 @@ nav li {
   margin: 8px;
   padding: 15px;
   background: #888;
-  color: #262524;
   border-radius: 2px;
 }
 
+.grid-item:hover {
+  opacity: 0.35;
+  
+}
+
+
+/*
 .grid-item > * {
   margin: 0;
   padding: 0;
 }
+*/
 
 .grid-item .name {
   position: absolute;
-  bottom: 44%;
+  bottom: 5%;
   text-transform: none;
-  text-align:center;
-  font-size: 18px;
-  left: 30%;
+  font-weight: 100;
+  text-align:left;
+  font-size: 22px;
+  left: 5%;
 }
-
-/*
-.grid-item .symbol {
-  position: absolute;
-  left: 10px;
-  top: 0px;
-  font-size: 42px;
-  font-weight: bold;
-  color: white;
-}
-*/
 
 
 .grid-item.design          { background: #F00; background: hsl(   0, 100%, 50%); }
@@ -186,3 +183,34 @@ nav li {
 .grid-item.photography     { background: #FF0; background: hsl(  72, 100%, 50%); }
 
 /* end isotope image grid filter styling */
+
+/* begin about page */
+#about-text-box {
+  float: left;
+  margin: 5% 0 0 5%;
+  width: 35%;
+}
+
+#about-title {
+  font-size: 2em;
+  font-weight: 100;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #000;
+}
+.about-intro {
+  margin-top: 6px;
+  line-height: 1.3;
+}
+
+.about-h3 {
+  margin: 10px 0 2px 0;
+  font-weight: 600;
+}
+
+#about-image-box {
+  margin: 5% 5% 0 0px;
+  height: 400px;
+  width: 600px;
+  float: right;
+  background-color: orange;
+}
