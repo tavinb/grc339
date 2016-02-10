@@ -452,7 +452,8 @@ tbody.collapse.in {
   }
 }
 .navbar-default {
-  background-color: transparent;
+  background-color: #fff;
+  border-radius: 0px;
 }
 .navbar-default .navbar-brand {
   color: #777;
@@ -547,6 +548,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 
+/*
 .container-fluid:before,
 .container-fluid:after,
 .nav:before,
@@ -561,9 +563,68 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .nav:after,
 .navbar:after,
 .navbar-header:after,
-.navbar-collapse:after,
+.navbar-collapse:after;
+*/
+
 
 /*end bootstrap navbar styling*/
+
+/*index cover photo*/
+#index-cover-photo {
+  background: url(../images/tavin-croatia.jpg) no-repeat center center fixed;
+  margin: 0;
+  width: auto;
+  height: 801px;
+/*
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+*/
+  background-size: cover;
+}
+
+.vert-text {
+  margin: 5% 27% 0 27%;
+}
+.vert-text h1 {
+  text-align: center;
+  font-family: 'Raleway', helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 21em;
+  opacity: 0.7;
+}
+
+.vert-text h4 {
+  
+  text-align: center;
+  font-family: 'Raleway', helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 2em;
+  color: #fff;
+  opacity: 1.0;
+}
+
+.call-to-action {
+  text-align: center;
+  font-size: 1.2em;
+  width: 220px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #28b6e4;
+  opacity: 1;
+  margin: 15px 0 0 41%;
+  padding: 13px 5px 15px 5px;
+}
+.call-to-action:hover {
+/*  box-shadow: inset 0 0 0 2.5px #fff;*/
+  border: 2px solid #28b6e4;
+  color: white;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+
 
 /*
 footer styling 
@@ -646,9 +707,13 @@ footer {
   width: 275px;
   height: 275px;
   margin: 8px;
-  padding: 15px;
-  background: #888;
+  padding: 0px;
+}
+.grid-item img {
+  width: 275px;
+  height: 275px;
   border-radius: 2px;
+/*  border: 2px solid #000;*/
 }
 
 .grid-item:hover {
@@ -704,10 +769,12 @@ footer {
   font-weight: 600;
 }
 
-#about-image-box {
-  margin: 5% 5% 0 0px;
-  height: 400px;
-  width: 600px;
+#about-image-box img {
+  margin: 4% 8% 0 0px;
+  height: 466px;
+  width: 416px;;
   float: right;
-  background-color: orange;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+  transform: rotate(7deg);
 }
