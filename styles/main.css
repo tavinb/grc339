@@ -4,6 +4,10 @@ body {
     font-family: helvetica, sans-serif;
 /*    background-image: url('../images/concrete_seamless.png');*/
     background-repeat: repeat;
+    overflow-y: scroll; /* or auto */
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -26,9 +30,10 @@ a {
     background: #6d6d6d;
 }
 
-a:hover {
+nav a:hover {
     padding-bottom: 5px;
     border-bottom: 4px solid #28b6e4;
+
 
 }
 
@@ -299,8 +304,8 @@ tbody.collapse.in {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: 0;
+  margin-left: 0;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -701,14 +706,19 @@ footer {
 
 /* ---- .element-item ---- */
 
-.grid-item {
+/*
+.grid__item {
   position: relative;
   float: left;
   width: 275px;
   height: 275px;
   margin: 8px;
   padding: 0px;
+  
 }
+*/
+
+
 .grid-item img {
   width: 275px;
   height: 275px;
@@ -716,9 +726,8 @@ footer {
 /*  border: 2px solid #000;*/
 }
 
-.grid-item:hover {
+.grid__item:hover {
   opacity: 0.35;
-  
 }
 
 
@@ -729,7 +738,7 @@ footer {
 }
 */
 
-.grid-item .name {
+.grid__item .name {
   position: absolute;
   bottom: 5%;
   text-transform: none;
@@ -738,6 +747,12 @@ footer {
   font-size: 22px;
   left: 5%;
 }
+.name:before {
+  color: transparent;
+}
+.name:hover {
+  color: #000;
+}
 
 
 .grid-item.design          { background: #F00; background: hsl(   0, 100%, 50%); }
@@ -745,6 +760,29 @@ footer {
 .grid-item.photography     { background: #FF0; background: hsl(  72, 100%, 50%); }
 
 /* end isotope image grid filter styling */
+
+/*begin tympanus image grid effect overlay*/
+button:focus {
+	outline: none;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.content {
+	padding: 1em 0 3em;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+
+
+
 
 /* begin about page */
 #about-text-box {
