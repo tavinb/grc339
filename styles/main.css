@@ -653,7 +653,7 @@ footer {
 
 /* ---- button ---- */
 
-.button {
+.isotopebutton {
   display: inline-block;
   background: none;
   border: none;
@@ -673,7 +673,7 @@ footer {
 */
 
 
-.button.is-checked {
+.isotopebutton.is-checked {
   color: #28b6e4;
 }
 
@@ -754,10 +754,6 @@ footer {
   color: #000;
 }
 
-
-.grid-item.design          { background: #F00; background: hsl(   0, 100%, 50%); }
-.grid-item.development     { background: #F80; background: hsl(  36, 100%, 50%); }
-.grid-item.photography     { background: #FF0; background: hsl(  72, 100%, 50%); }
 
 /* end isotope image grid filter styling */
 
