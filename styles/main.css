@@ -46,6 +46,8 @@ a.current {
   font-family: 'Raleway', helvetica, sans-serif;
   font-size: 4em;
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* nav bar styling */
@@ -747,12 +749,15 @@ footer {
   font-size: 22px;
   left: 5%;
 }
+
+/*
 .name:before {
   color: transparent;
 }
 .name:hover {
   color: #000;
 }
+*/
 
 
 /* end isotope image grid filter styling */
