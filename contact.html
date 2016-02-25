@@ -6,6 +6,11 @@
     <title>Tavin Boynton | CONTACT</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
+<!--    <link rel="stylesheet" type="text/css" href="styles/contact/demo.css" />-->
+    <link rel="stylesheet" type="text/css" href="styles/contact/component.css" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <script src="js/contact/modernizr-2.7.1.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -20,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.html"><img src="images/logo_100.png" alt="logo-100"></a>
+      <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,11 +45,103 @@
 <h1 class="page-title">CONTACT</h1>
 
 <!--begin contact content-->
-<div id="contact-text-box">
-  <p class="contact-intro"><em>
-  I like to think I'm approachable.
-  </em></p>
-</div>
+
+<div class="contact-form">
+		
+<!--			<section>-->
+				<form id="theForm" class="simform" autocomplete="off">
+					<div class="simform-inner">
+						<ol class="questions">
+							<li>
+								<span><label for="q1">Name:</label></span>
+								<input id="q1" name="q1" type="text"/>
+							</li>
+							<li>
+								<span><label for="q2">Email:</label></span>
+								<input id="q2" name="q2" type="text"/>
+							</li>
+							<li>
+								<span><label for="q3">Message</label></span>
+								<input id="q3" name="q3" type="text"/>
+							</li>
+							<li>
+								<span><label for="q4">Sunrise or sunset?</label></span>
+								<input id="q4" name="q4" type="text"/>
+							</li>
+							
+						</ol><!-- /questions -->
+						<button class="submit" type="submit">Send answers</button>
+						<div class="controls">
+							<button class="next"></button>
+							<div class="progress"></div>
+							<span class="number">
+								<span class="number-current"></span>
+								<span class="number-total"></span>
+							</span>
+							<span class="error-message"></span>
+						</div><!-- / controls -->
+					</div><!-- /simform-inner -->
+					<span class="final-message"></span>
+				</form><!-- /simform -->			
+<!--			</section>-->
+			
+		</div><!-- /container -->
+        <div id="contact-leftbox">
+          <h1>Are you...</h1>
+          <h5>Hiring for an internship?</h5>
+          <p>I'm on the lookout for an awesome summer 2016 internship. Let's setup an interview!</p>
+          <h5>Looking for freelance talent?</h5>
+          <p>I always love helping my community through freelance work. I offer services in:</p>
+          <ul>
+            <li>Website Creation</li>
+            <li>Branding</li>
+            <li>User Experience/ Interaction</li>
+            <li>Photography</li>
+            <li>Need something else? Get in touch!</li>
+          </ul>
+          <h5>Just saying hi?</h5>
+          <p>Well, hey! This'll be an amusing read.</p>
+        </div>
+        
+        <div id="contact-rightbox">
+          <h5>I like to think I'm sociable!</h5>
+         <ul class="socials">
+           <li><a href="https://www.linkedin.com/in/tavinb" target=_blank><img src="assets/icons/social/social-icons_linkedin.png" alt="linkedin-icon"></a></li>
+           <li><a href="https://www.facebook.com/tavin.boynton" target=_blank><img src="assets/icons/social/social-icons_facebook.png" alt="facebook-icon"></a></li>
+           <li><a href="https://www.instagram.com/tavinb95" target=_blank><img src="assets/icons/social/social-icons_instagram.png" alt="instagram-icon"></a></li>
+           <li><a href="https://tavinbtravels.wordpress.com" target=_blank><img src="assets/icons/social/social-icons_wordpress.png" alt="wordpress-icon"></a></li>
+           <li><a href="mailto:tavinb@gmail.com?subject=Tavin!"><img src="assets/icons/social/social-icons_mail.png" alt="mail-icon"></a></li>
+         </ul>
+          
+          
+          
+          
+        </div>
+  
+		<script src="js/contact/classie.js"></script>
+		<script src="js/contact/stepsForm.js"></script>
+		<script>
+			var theForm = document.getElementById( 'theForm' );
+
+			new stepsForm( theForm, {
+				onSubmit : function( form ) {
+					// hide form
+					classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+					/*
+					form.submit()
+					or
+					AJAX request (maybe show loading indicator while we don't have an answer..)
+					*/
+
+					// let's just simulate something...
+					var messageEl = theForm.querySelector( '.final-message' );
+					messageEl.innerHTML = "Thanks! I'll be in touch.";
+					classie.addClass( messageEl, 'show' );
+				}
+			} );
+		</script>
+<footer>Copyright &copy; 2016 Tavin Boynton</footer>
 
 </body>
 </html>

@@ -9,13 +9,16 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
 <!-- head items for tympanus portfolio overlay-->
     <link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="styles/normalize.css" />
+<!--	<link rel="stylesheet" type="text/css" href="styles/normalize.css" />-->
 <!--	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />-->
-	<link rel="stylesheet" type="text/css" href="styles/image-grid-overlay.css" />
+	<link rel="stylesheet" type="text/css" href="styles/work/image-grid-overlay.css" />
 <!--	Slick carousel formatting -->
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-	<script src="js/tympanus/modernizr-custom.js"></script>
+    
+    <!--	creates overlay transition-->
+	<script src="js/work/modernizr-3.1.0.js"></script>
+    
 </head>
 <body>
     <nav class="navbar navbar-default" id="navbar">
@@ -29,7 +32,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.html"><img src="images/logo_100.png" alt="logo-100"></a>
+      <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,19 +60,10 @@
 </div>
 
 <div class="isotope">
-<!--<div class="container">-->
-<!-- <div class="content">-->
-<!--
-                <div class="grid__item" data-size="837x1280">
-					<a href="img/original/3.jpg" class="img-wrap"><img src="img/thumbs/3.jpg" alt="img03" />
-						<div class="description description--grid">
--->
-                
-                
+                         
                 <div class="grid">
-<!--			<div class="grid-item design " data-category="design">-->
-				<div class="grid-item grid__item design" data-size="1280x857" data-category="design" class="img-wrap">
-					<a href="images/business-cards.jpg"><img src="images/grid-images/bossanova_square.png" alt="bossa_nova_square"/>
+				<div class="grid-item grid__item design" data-size="1280x857" data-category="design" >
+					<a href="assets/images/grid-images/bossanova_square-1280.png"><img src="assets/images/grid-images/bossanova_square-1280.png" alt="bossa_nova_square"/>
 						<div class="description description--grid hidden">
 							<h3 class="name">Bossa Nova</h3>
 							<p>This is a logo design for a new line of instruments at Rhythm Traders, a percussion store based in Portland, Oregon. The logo has been outfitted on thousands of percussion instruments, ranging from congas to egg shakers.</p>
@@ -84,8 +78,9 @@
 					</a>
 				</div>
 				
-              <div class="grid-item grid__item development" data-size="1280x857" data-category="development" class="img-wrap">
-                  <a href="images/nyc-timesquare.jpg" class="img-wrap"><img src="images/grid-images/dev_greece_square.jpg" alt="greece_square" />
+              <div class="grid-item grid__item development img-wrap" data-size="1280x857" data-category="development" >
+<!--                 <div class="grid-item grid__item development" data-size="1280x857" data-category="development" class="img-wrap">-->
+                  <a href="assets/images/grid-images/dev_greece_square-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/dev_greece_square-1280.jpg" alt="greece_square" />
                       <div class="description description--grid hidden">
                           <h3 class="name">Mediterranean Summer</h3>
                           <p>My first real web design project was developing a fully-responsive website for AIESEC San Luis Obispo to market an international summer internship in Greece to Cal Poly students. It is programmed from scratch using HTML5 and CSS3, and includes JQuery plug-ins for a few special touches.</p>
@@ -99,8 +94,8 @@
                   </a>
               </div>
               
-              <div class="grid-item grid__item photography" data-size="1280x857" data-category="photography" class="img-wrap">
-					<a href="images/product-images/applewatch-1-big.jpg" class="img-wrap"><img src="images/grid-images/applewatch_square.jpg" alt="applewatch_square" />
+              <div class="grid-item grid__item photography img-wrap" data-size="1280x857" data-category="photography">
+					<a href="assets/images/grid-images/photo_applewatch_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/photo_applewatch_grid-1280.jpg" alt="applewatch_square" />
 						<div class="description description--grid hidden">
 							<h3 class="name">Apple Watch Stock Collection</h3>
 							<p>Hired by eCommerce company to formulate brand direction of Apple Watches to differentiate their products. First, did market research to see what competitors’ images looked like, and researched similar price-points of traditional watches for successful photo techniques. After experimenting in different settings, landed on sophisticated look for standard Watch, and more rugged lifestyle look for Sport Watch. This is an ongoing project to create stock imagery for this brand.
@@ -108,16 +103,15 @@
 							<div class="details">
 								<ul>
 									<li><i class="icon icon-camera"></i><span>Fall 2015</span></li>
-									<li><i class="icon icon-focal_length"></i><span>Nikon D3200</span></li>
-				
+									
 								</ul>
 							</div>
 						</div>
 					</a>
 				</div>
 				
-              <div class="grid-item grid__item design" data-size="1280x857" data-category="design" class="img-wrap">
-                  <a href="images/grid-images/pin-your-next-adventure_square.jpg" class="img-wrap"><img src="images/grid-images/pin-your-next-adventure_square.jpg" alt="pin-your-next-adventure_square" />
+              <div class="grid-item grid__item design img-wrap" data-size="1280x857" data-category="design">
+                  <a href="assets/images/grid-images/design_pinyournext_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/design_pinyournext_grid-1280.jpg" alt="pin-your-next-adventure_square" />
                       <div class="description description--grid hidden">
                           <h3 class="name">Pin Your Next Adventure</h3>
                           <p>Working in collaboration with Cal Poly student Taya Arnone, I created a streamlined marketing campaign to increase awareness of AIESEC around campus, and to encourage Cal Poly students to consider an exchange abroad.</p>
@@ -131,17 +125,12 @@
                   </a>
               </div>
               
-              <div class="grid-item grid__item development" data-size="1280x857" data-category="development" class="img-wrap">
-					<a href="images/grid-images/dev_treatSLO_square.jpg" class="img-wrap"><img src="images/grid-images/dev_treatSLO_square.jpg" alt="treatSLO_square" />
+              <div class="grid-item grid__item development img-wrap" data-size="1280x857" data-category="development">
+					<a href="assets/images/grid-images/dev_treatSLO_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/dev_treatSLO_grid-1280.jpg" alt="treatSLO_square" />
 						<div class="description description--grid hidden">
 							<h3 class="name">treatSLO.</h3>
-                          <p>Site for a newly established bakery. Created as a WordPress site to ease site management by business owner. Many special features utilize the power of the platform: </p>
-                            <ol>
-                              <li>MailChimp integration allows users to subscribe, which autofills into owner’s existing mail list.</li>
-                              <li>Facebook widget lets users “like” the bakery without leaving the site.</li>
-                              <li>Backend of form on “Order Treats!” organizes orders in accessible format and gives owner the option to export as a CSV file, which makes for simple record keeping.</li>
-                              <li>Blog posts redirected to secondary page, allowing home page to be static and, well, tasty.</li>
-                            </ol>
+                          <p>Site for a newly established bakery. Created as a WordPress site to ease site management by business owner. Many special features utilize the power of the platform:</p>
+                           <p>MailChimp integration allows users to subscribe, which autofills into owner’s existing mail list. Facebook widget lets users “like” the bakery without leaving the site. Backend of form on “Order Treats!” organizes orders in accessible format and gives owner the option to export as a CSV file, which makes for simple record keeping.Blog posts redirected to secondary page, allowing home page to be static and, well, tasty.</p>
                             
 							<div class="details">
 								<ul>
@@ -153,8 +142,8 @@
 					</a>
 				</div>
 				
-              <div class="grid-item grid__item photography" data-size="1280x857" data-category="photography" class="img-wrap">
-                  <a href="images/grid-images/photo_montenegro-factory_square.JPG" class="img-wrap"><img src="images/grid-images/photo_montenegro-factory_square.JPG" alt="factory_square" />
+              <div class="grid-item grid__item photography img-wrap" data-size="1280x857" data-category="photography">
+                  <a href="assets/images/grid-images/photo_factory_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/photo_factory_grid-1280.jpg" alt="factory_square" />
                       <div class="description description--grid hidden">
                           <h3 class="name">Abandoned Factory</h3>
                           <div class="details">
@@ -169,8 +158,8 @@
                   </a>
               </div>
               
-              <div class="grid-item grid__item design" data-size="1280x857" data-category="design" class="img-wrap">
-					<a href="images/grid-images/calendar-square.jpg" class="img-wrap"><img src="images/grid-images/calendar-square.jpg" alt="calendar_square" />
+              <div class="grid-item grid__item design img-wrap" data-size="1280x857" data-category="design">
+					<a href="assets/images/grid-images/design_calendar_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/design_calendar_grid-1280.jpg" alt="calendar_square" />
 						<div class="description description--grid hidden">
 							<h3 class="name">Type Calendar</h3>
 							<p>Custom 13-month calendar design featuring original typography and photography. After the design was finalized, I learned to impose it using professional imposition software.</p>
@@ -184,8 +173,8 @@
 					</a>
 				</div>
 				
-              <div class="grid-item grid__item development" data-size="1280x857" data-category="development" class="img-wrap">
-                  <a href="images/grid-images/dev_pulse_square.jpg" class="img-wrap"><img src="images/grid-images/dev_pulse_square.jpg" alt="pulse_square" />
+              <div class="grid-item grid__item development img-wrap" data-size="1280x857" data-category="development" >
+                  <a href="assets/images/grid-images/dev_pulse_grid-768.jpg" class="img-wrap"><img src="assets/images/grid-images/dev_pulse_grid-768.jpg" alt="pulse_square" />
                       <div class="description description--grid hidden">
                           <h3 class="name">Cal Poly Health Education</h3>
                           <p>Re-developed of website for Cal Poly Health Education. The old site was in disarray and was not strategically organized, so my redesign started from the ground up. First I wrote the structural hierarchy on sticky notes and then re-arranged them in the most logical order, considering many user cases. I then inputted this information digitally and further refined the structure. Third, I created mockups which I presented to my supervisor during meetings. The website was created using Cal Poly’s Drupal system.
@@ -193,10 +182,6 @@
                           <div class="details">
                               <ul>
                                   <li><i class="icon icon-camera"></i><span>Spring 2015</span></li>
-                                  <li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
-                                  <li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
-                                  <li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
-                                  <li><i class="icon icon-iso"></i><span>80</span></li>
                               </ul>
                           </div>
                       </div>
@@ -204,8 +189,8 @@
               </div>
               
        
-              <div class="grid-item grid__item photography" data-size="1280x857" data-category="photography" class="img-wrap">
-					<a href="images/grid-images/photo_disrupted-reflection_square.JPG" class="img-wrap"><img src="images/grid-images/photo_disrupted-reflection_square.JPG" alt="disrupted-reflection_square" />
+              <div class="grid-item grid__item photography img-wrap" data-size="1280x857" data-category="photography">
+					<a href="assets/images/grid-images/photo_disrupted-reflection_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/photo_disrupted-reflection_grid-1280.jpg" alt="disrupted-reflection_square" />
 						<div class="description description--grid hidden">
 							<h3 class="name">Disrupted Reflection</h3>
 							<div class="details">
@@ -220,8 +205,8 @@
 					</a>
 				</div>
 			
-              <div class="grid-item grid__item design" data-size="1280x857" data-category="design" class="img-wrap">
-                  <a href="images/grid-images/design_teaching_grid.jpg" class="img-wrap"><img src="images/grid-images/design_teaching_grid.jpg" alt="design_teaching_square" />
+              <div class="grid-item grid__item design img-wrap" data-size="1280x857" data-category="design">
+                  <a href="assets/images/grid-images/design_teaching_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/design_teaching_grid-1280.jpg" alt="design_teaching_square" />
                       <div class="description description--grid hidden">
                           <h3 class="name">Teaching Graphic Design in Montenegro</h3>
                           <p>During the summer of 2015, I had the privilege to teach graphic design at a university in Podgorica, Montenegro to a class of 15 students. Each class was interactive and included both a lecture and practical workshop. Homework included going into the community to gain inspiration, sketching, and completing projects using Adobe software.<br><br>
@@ -232,18 +217,15 @@
                           <div class="details">
                               <ul>
                                   <li><i class="icon icon-camera"></i><span>Summer 2015</span></li>
-                                  <li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
-                                  <li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
-                                  <li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
-                                  <li><i class="icon icon-iso"></i><span>80</span></li>
+                                  
                               </ul>
                           </div>
                       </div>
                   </a>
               </div>
               
-              <div class="grid-item grid__item development" data-size="1280x857" data-category="development" class="img-wrap">
-					<a href="images/grid-images/dev_hackathon-rainbow.jpg" class="img-wrap"><img src="images/grid-images/dev_hackathon-rainbow.jpg" alt="hackathon_square" />
+              <div class="grid-item grid__item development img-wrap" data-size="1280x857" data-category="development" >
+					<a href="assets/images/grid-images/dev_hackathon_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/dev_hackathon_grid-1280.jpg" alt="hackathon_square" />
 						<div class="description description--grid hidden">
 							<h3 class="name">Marshawn's Rainbow Run</h3>
 							<p>This is an iOS game that was designed and programmed in under 24 hours at the Cal Poly Design and Dev Hackathon in January 2015. My team consisted of 1 User Experience Designer (myself), 1 marketer (James Kang), and 2 developers (Alex Greene and Rohit Sharma).<br><br>
@@ -253,18 +235,14 @@
 							<div class="details">
 								<ul>
 									<li><i class="icon icon-camera"></i><span>January 2015</span></li>
-									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
-									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
-									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
-									<li><i class="icon icon-iso"></i><span>80</span></li>
 								</ul>
 							</div>
 						</div>
 					</a>
 				</div>
               				
-              <div class="grid-item grid__item photography" data-size="1280x857" data-category="photography" class="img-wrap">
-                  <a href="images/grid-images/photo_bonfire_grid.jpg" class="img-wrap"><img src="images/grid-images/photo_bonfire_grid.jpg" alt="bonfire_square" />
+              <div class="grid-item grid__item img-wrap photography" data-size="1280x857" data-category="photography">
+                  <a href="assets/images/grid-images/photo_bonfire_grid-655.jpg" class="img-wrap"><img src="assets/images/grid-images/photo_bonfire_grid-655.jpg" alt="bonfire_square" />
                       <div class="description description--grid hidden">
                           <h3 class="name">Midnight Bonfire</h3>
                           <div class="details">
@@ -279,8 +257,23 @@
                   </a>
               </div>
               
-              <div class="grid-item grid__item photography" data-size="1280x857" data-category="photography" class="img-wrap">
-					<a href="images/grid-images/photo_highway1_grid.jpg" class="img-wrap"><img src="images/grid-images/photo_highway1_grid.jpg" alt="highway1_square" />
+              <div class="grid-item grid__item design img-wrap" data-size="1280x857" data-category="design">
+                  <a href="assets/images/grid-images/design_boltabout_grid-1280.png" class="img-wrap"><img src="assets/images/grid-images/design_boltabout_grid-1280.png" alt="bonfire_square" />
+                      <div class="description description--grid hidden">
+							<h3 class="name">BoltAbout</h3>
+                        <p> Logo design for my electric bicycle startup.</p>
+                        <p>Designed to mimic retro California license plates. The logo has been sublimated onto steel and mounted on every bike in our fleet. </p>
+							<div class="details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>February 2016</span></li>
+								</ul>
+							</div>
+						</div>
+                  </a>
+              </div>
+              
+              <div class="grid-item grid__item photography img-wrap" data-size="1280x857" data-category="photography">
+					<a href="assets/images/grid-images/photo_highway1_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/photo_highway1_grid-1280.jpg" alt="highway1_square" />
 						<div class="description description--grid hidden">
 							<h3 class="name">Edition 1.</h3>
 							<p>I stretched the potential of my photography by creating a set of custom cards which I have given to family and friends as gifts. I hope to create more sets in the future, a reason why this is aptly named “Edition 1.” All images are my own and were taken along the Central Coast of California.
@@ -288,18 +281,15 @@
 							<div class="details">
 								<ul>
 									<li><i class="icon icon-camera"></i><span>Fall 2014</span></li>
-									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
-									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
-									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
-									<li><i class="icon icon-iso"></i><span>80</span></li>
+									
 								</ul>
 							</div>
 						</div>
 					</a>
 				</div>
 				
-				<div class="grid-item grid__item design" data-size="1280x857" data-category="design" class="img-wrap">
-					<a href="images/grid-images/design_my-aiesec-journey_grid.png" class="img-wrap"><img src="images/grid-images/design_my-aiesec-journey_grid.png" alt="my-aiesec-journey_square" />
+				<div class="grid-item grid__item design img-wrap" data-size="1280x857" data-category="design">
+					<a href="assets/images/grid-images/design_my-aiesec-journey_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/design_my-aiesec-journey_grid-1280.jpg" alt="my-aiesec-journey_square" />
 						<div class="description description--grid hidden">
 							<h3 class="name">My AIESEC Journey</h3>
 							<p>Flew to New York to work in the Manhattan office of AIESEC United States, the team which oversees operation of 40+ chapters across the US. Produced 250-page book consisting of educational materials about the organization, journaling, monthly personality assessments, and planner spreads for 2016. After over 40 hours of work, I successfully executed the project in just 5 days. It was unveiled at a national conference and will soon be distributed through every chapter in the US and to select countries internationally.
@@ -307,28 +297,22 @@
 							<div class="details">
 								<ul>
 									<li><i class="icon icon-camera"></i><span>December 2015</span></li>
-									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
-									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
-									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
-									<li><i class="icon icon-iso"></i><span>80</span></li>
+								
 								</ul>
 							</div>
 						</div>
 					</a>
 				</div>
-				<div class="grid-item grid__item design" data-size="1280x857" data-category="design" class="img-wrap">
-					<a href="images/grid-images/design_adobe-workshop_grid.jpg" class="img-wrap"><img src="images/grid-images/design_adobe-workshop_grid.jpg" alt="adobe-workshop_square" />
+				<div class="grid-item grid__item design img-wrap" data-size="1280x857" data-category="design">
+					<a href="assets/images/grid-images/design_adobe-workshop_grid-1280.jpg" class="img-wrap"><img src="assets/images/grid-images/design_adobe-workshop_grid-1280.jpg" alt="adobe-workshop_square" />
 						<div class="description description--grid hidden">
 							<h3 class="name">Adobe Capture Workshop</h3>
-							<p>I stretched the potential of my photography by creating a set of custom cards which I have given to family and friends as gifts. I hope to create more sets in the future, a reason why this is aptly named “Edition 1.” All images are my own and were taken along the Central Coast of California.
+							<p>Cross-channel marketing campaign for an Adobe mobile app workshop. Created phone screen content in Illustrator, juxtapozed into Photoshop, and made the final layout in InDesign. 
 							</p>
 							<div class="details">
 								<ul>
-									<li><i class="icon icon-camera"></i><span>Fall 2014</span></li>
-									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
-									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
-									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
-									<li><i class="icon icon-iso"></i><span>80</span></li>
+									<li><i class="icon icon-camera"></i><span>Winter 2016</span></li>
+									<li><i class="icon icon-focal_length"></i><span>Photoshop, Illustrator, InDesign</span></li>
 								</ul>
 							</div>
 						</div>
@@ -337,16 +321,16 @@
 				
    </div>
    <div class="preview">
-      <button class="action action--close"><img src="images/ic_close_48pt_3x.png" alt="close-button" width="48px"><span class="text-hidden">Close</span></button>
+      <button class="action action--close"><img src="assets/icons/ic_close_48pt_3x.png" alt="close-button" width="48"><span class="text-hidden">Close</span></button>
       <div class="description description--preview"></div>
    </div>
 			<!-- /preview -->
   </div>
-  </div>
+
   
 <!--
   <div class="grid-item design " data-category="design">
-    <img src="images/grid-images/bossanova_square.png" alt="bossa_nova_square">
+    <img src="assets/images/grid-images/bossanova_square.png" alt="bossa_nova_square">
     <h3 class="name">Bossa Nova</h3>
   </div>
 -->
@@ -359,21 +343,27 @@
 -->
 
   
-</div>
+
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://mfzy.co/isotope.pkgd.js'></script>
-    <script src="js/isotope.js"></script> 
-    
-    <script src="js/tympanus/imagesloaded.pkgd.min.js"></script>
-	<script src="js/tympanus/masonry.pkgd.min.js"></script>
-	<script src="js/tympanus/classie.js"></script>
-	<script src="js/tympanus/main.js"></script>
+<!--    filtering scripts-->
+    <script src='http://mfzy.co/isotope.pkgd.js'></script>
+    <script src="js/work/isotope.js"></script> 
+
+   <!--    project img overlay scripts-->
+    <script src="js/work/imagesloaded.pkgd.min.js"></script>
+    <script src="js/work/classie.js"></script>
+	<script src="js/work/main.js"></script>
+<!--	<script src="js/work/masonry.pkgd.min.js"></script>-->
+
+
+
 	
-<!--	Slick carousel JS-->
+<!--	Slick carousel JS
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-				
+	
+-->			
 	
 <!--	each image creates overlay with description on hover-->
 	<script>
@@ -434,6 +424,7 @@
 			});
 		})();
 	</script>
+<!--
     <script>
       $('.caro').slick({
       slidesToShow: 1,
@@ -450,6 +441,10 @@
       centerMode: true,
       focusOnSelect: true
     });
-    </script>  
+    </script>
+-->
+    
+<!--    <footer>Copyright &copy; 2016 Tavin Boynton</footer>-->
+    
 </body>
 </html>
