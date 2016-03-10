@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Is tavin smart?</title>
+<!--		<link href="/css/fluid.css" rel="stylesheet" type="text/css">-->
+		<link href="/css/navicon.css" rel="stylesheet" type="text/css">
+		<link href="/css/style.css" rel="stylesheet" type="text/css">
+<!--		<link href="/fonts/ui/ui-font-solid.css" rel="stylesheet" type="text/css">-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--		<script src="/js/jquery.animsition.min.js"></script>-->
+<!--		<script src="/js/fastclick.min.js"></script>-->
+		<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+		var fastClickButton = document.querySelector('.fastclick');
+		new FastClick(fastClickButton);
+	});
+        </script>
+		<style type="text/css">
+			                header {
+                              background-color: transparent;
+                              -webkit-transition: background 500ms ease;
+                              -o-transition: background 500ms ease;
+                              transition: background 500ms ease;
+                              }
+                            .gCHero {
+                              position: absolute;
+                              top: 50%;
+                              width: auto;
+                              height: 9em;
+                              margin-top: -4.5em;
+                              z-index: 1;
+                              }
+                            .frame {
+                              width: 100%;
+                              height: 100%;
+                              z-index: 0;
+                              border: none;
+                              }
+                            .mobiframe {
+                              width: 100%;
+                              height: 100%;
+                              z-index: 0;
+                              display: none;
+                              }        
+		</style>
+	</head>
+	<body>
+		        
+		<header id="topbar">
+<!--			<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">-->
+			<div class="gridContainer clearfix">
+				  <img src="../assets/images/logo_100.png" alt="Home" ondragstart="return false">           
+			<div class="fastclick" id="navicon">
+				                <span></span>                <span></span>            
+			</div>
+			                        
+			<nav>
+				<ul>
+					<li>
+						<a href="#" class="headlink animsition-link">Creations</a>
+					</li>
+					                    
+					<li>
+						<a href="#" class="headlink animsition-link">Services</a>
+					</li>
+					                    
+					<li>
+						<a href="#" class="headlink animsition-link">About</a>
+					</li>
+					                    
+					<li>
+						<a href="#" class="headlink animsition-link">Contact</a>
+					</li>
+					                
+				</ul>
+			</nav>
+			<div id="marginwidth" style="height:0;"></div>
+			                    
+		</div>
+		            
+	</header>
+<!--	<div style="height: 100%;">-->
+		            
+<!--		<iframe class="frame" src="/birds.html#2"></iframe>-->
+		            
+<!--
+		<div class="mobiframe">
+			 
+		</div>
+-->
+		            
+<!--
+		<div class="gridContainer gCHero">
+			        
+			<h1>
+				Hello, I'm Tavin.<br>I'm struggling with/trying to learn JS.</h1>        
+				<p>
+					<a class="animsition-link line" href="creations/">See what I do  ›</a>
+				</p>
+				    
+			</div>
+-->
+			                
+			<!--<div class="gridContainer clearfix">
+        
+        <div class="row">
+            <div class="fluid div1">
+                <img src="/images/drakes.jpg">
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="fluid div1">
+                <h1>Hello, I'm Matt Bowers.<br>An identity & interface designer.</h1>
+                <h2>This Project</h2>
+                <h3>View Project</h3>
+                <p>Bacon ipsum dolor amet ham chicken bresaola tongue tri-tip, brisket sausage tenderloin drumstick alcatra beef ribs. Tongue tri-tip sirloin, kielbasa corned beef tail kevin beef ribs chicken. Alcatra sirloin beef chuck. Tongue chicken filet mignon, tenderloin shankle ribeye brisket jowl pork belly.
+
+
+
+</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="fluid div2a divimg">
+            <img src="http://www.doginstructor.com/wp-content/uploads/2012/04/dog-obedience-classes3.jpg">
+            </div>
+
+            <div class="fluid div2a divimg">
+            <img src="https://blog-photos.dogvacay.com/blog/wp-content/uploads/2015/06/Dog3.jpeg">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="fluid div1 divimg">
+                <img src="http://static2.businessinsider.com/image/521cd3ebeab8eac31e3a6bae/ranked-the-11-best-dog-breeds.jpg">
+            </div>
+        </div>
+        
+
+    </div> -->
+			            
+<!--		</div>-->
+		<script src="/js/scroll-up-bar.min.js"></script>
+		<script src="/fonts/ui/ui-font.js"></script>
+		<script type="text/javascript">
+
+
+// Vertical Grid Padding
+$(window).resize(function() {
+    var mwid = $('#marginwidth').width();
+    $(".fluid").css('padding-bottom', mwid);
+});
+$(window).resize(function() {
+    var gcwid = $('.gridContainer').width()
+    var winwid = $(window).width()
+    var heropos = ( winwid - gcwid ) / 2 
+    $(".gCHero").css('left', heropos);
+});
+$(window).trigger('resize');
+
+// Transparent Header
+var $logo = $('header');
+$(document).scroll(function() {
+    $logo.css({backgroundColor: $(this).scrollTop() > 200? "#fff":"transparent"});
+});
+
+//// Scroll Up Bar
+//$('#topbar').scrollupbar();
+
+// Navicon Open
+$(document).ready(function(){
+	$('#navicon').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+
+$(document).ready(function(){
+	$('.headlink').click(function(){
+		if ($('nav').hasClass('navisible')) {
+            $('#navicon').toggleClass('open'); }
+	});
+});
+    
+// Mobile Nav Open
+$(document).ready(function(){
+	$('#navicon').click(function(){
+		$('nav').toggleClass('navisible');
+	});
+});
+
+$(document).ready(function(){
+	$('.headlink').click(function(){
+		if ($('nav').hasClass('navisible')) {
+            $('nav').toggleClass('navisible'); }
+	});
+});
+    
+//// Test iOS
+//$(document).ready(function(){
+//    iOS = false, p = navigator.platform;
+//    if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ) {
+//          iOS = true;
+//    }
+//    if (iOS === true) {
+//        $(".mobiframe").css('display','block')
+//    }
+//    if (iOS === true) {
+//        $(".frame").css('display','none')
+//    }
+//});
+
+</script>
+<!--
+		
+-->
+	</body>
+</html>

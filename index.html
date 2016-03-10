@@ -1,3 +1,15 @@
+<!--working notes-->
+<!--
+As of March 3 Thursdsay Lab,
+I got hamburger button to click, but problems:
+1. Default loads expanded. Should load compressed
+2. white box should be behind all when expanded
+3. text should be reformatted, aligned right
+
+After this, look to implement cool hamburger button
+After that, make everything else work
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,59 +18,133 @@
     <title>Tavin Boynton</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="styles/navicon.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
-    <div id="index-cover-photo">
-    <nav class="navbar navbar-default" id="navbar">
     
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <!-- Icon-bar means hamburger button-->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100"></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="work.html">WORK</a></li>
-        <li><a href="about.html">ABOUT ME</a></li>
-        <li><a href="resume.html">RESUME</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-      
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    
+    <header id="navbar topbar">
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100" ondragstart="return false;"></a>
+		<div id="navicon">
+		  <span></span>
+		  <span></span>            
+		</div>
+		                       
+		<nav>
+		  <ul class="nav">
+<!--		<li><a href="work.html" class="headlink animsition-link">WORK</a></li>-->
+		    <li><a href="contact.html" class="headlink">CONTACT</a></li>          
+		    <li><a href="resume.html" class="headlink">RESUME</a></li>	       
+		    <li><a href="about.html" class="headlink">ABOUT ME</a></li>
+            <li><a href="work.html" class="headlink">WORK</a></li>               
+		  </ul>
+		</nav>
+<!--			<div id="marginwidth" style="height:0;"></div>-->
+	            
+    </header>
+   <div id="index-cover-photo"> 
     
   <div class="vert-text">  
   <h1>Hi.</h1>
-  <h4>I'm Tavin. I'm a UX designer and front-end developer based in San Luis Obispo, California. Our story begins here.</h4>
+  <h4>I'm Tavin. A graphic designer and front-end developer based in<br>San Luis Obispo, California.<br>Our story begins here.</h4>
   </div>
   
-  <a href="work.html"><div class="call-to-action">Begin the adventure</div></a>
+<!--  <a href="work.html"><div class="call-to-action">Begin the adventure</div></a>-->
   
 
 </div>
 
-<!--
-<footer>
-  <h2>&copy; Tavin Boynton 2016</h2>
-</footer>
--->
-<script src="js/bootstrap.js"></script>
-<script src="js/transition.js"></script>    
-<script>$('.collapse').collapse()</script>
+<!--<footer>Copyright &copy; 2016 Tavin Boynton</footer>-->
 
-<footer>Copyright &copy; 2016 Tavin Boynton</footer>
+
+
+<!--<script src="js/bootstrap/bootstrap.js"></script>-->
+
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/bootstrap/jquery.min.js"><\/script>')</script>
+-->
+<!--<script src="js/bootstrap/bootstrap.min.js"></script>-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--<script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>-->
+
+<!--<script src="js/bootstrap/transition.js"></script>    -->
+<!--<script>$('.collapse').collapse()</script>-->
+
+<script src="/js/scroll-up-bar.min.js"></script>
+		<script src="/fonts/ui/ui-font.js"></script>
+		<script type="text/javascript">
+
+
+//// Vertical Grid Padding
+//$(window).resize(function() {
+//    var mwid = $('#marginwidth').width();
+//    $(".fluid").css('padding-bottom', mwid);
+//});
+//$(window).resize(function() {
+//    var gcwid = $('.gridContainer').width()
+//    var winwid = $(window).width()
+//    var heropos = ( winwid - gcwid ) / 2 
+//    $(".gCHero").css('left', heropos);
+//});
+//$(window).trigger('resize');
+
+// Transparent Header
+var $logo = $('header');
+$(document).scroll(function() {
+    $logo.css({backgroundColor: $(this).scrollTop() > 200? "#fff":"transparent"});
+});
+
+//// Scroll Up Bar
+//$('#topbar').scrollupbar();
+
+// Navicon Open
+$(document).ready(function(){
+	$('#navicon').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+
+$(document).ready(function(){
+	$('.headlink').click(function(){
+		if ($('nav').hasClass('navisible')) {
+            $('#navicon').toggleClass('open'); }
+	});
+});
+    
+// Mobile Nav Open
+$(document).ready(function(){
+	$('#navicon').click(function(){
+		$('nav').toggleClass('navisible');
+	});
+});
+
+$(document).ready(function(){
+	$('.headlink').click(function(){
+		if ($('nav').hasClass('navisible')) {
+            $('nav').toggleClass('navisible'); }
+	});
+});
+    
+// Test iOS
+$(document).ready(function(){
+    iOS = false, p = navigator.platform;
+    if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ) {
+          iOS = true;
+    }
+    if (iOS === true) {
+        $(".mobiframe").css('display','block')
+    }
+    if (iOS === true) {
+        $(".frame").css('display','none')
+    }
+});
+
+</script>
 
 </body>
 

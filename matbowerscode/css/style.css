@@ -1,0 +1,411 @@
+@charset "UTF-8";
+/* CSS Document – All that Fancy Crap */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: orange;
+    opacity: 1;
+}
+
+/* COMPONENTS */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: orange;
+    z-index: 1;
+}
+
+header a img {
+  height: 20px;
+}
+/*footer {
+    height: 152px;
+    background-color: #777;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 770px) {
+    footer {
+        height: 148px;
+        opacity: 1 !important;
+    }
+}*/
+/*
+@media only screen and (max-width: 480px) {
+    footer {
+        height: 130px;
+    }
+}
+
+.headlogolink {
+    opacity: 0.5;
+    -webkit-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+
+.headlogolink img {
+    width: 35px;
+}
+
+.headlogolink:hover {
+    opacity: 1;
+}
+
+.underhead {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+.firstrow {
+    padding: 20px 0;
+}
+.firstrow .div3a, .firstrow .div3b {
+    text-align: left;
+}
+
+#marginwidth {
+    width: 5%;
+}
+*/
+/*@media only screen and (min-width: 481px) {
+    #marginwidth {
+        width: 2%;
+    }
+    .firstrow {
+    padding: 30px 0;
+    }
+    .firstrow .div3a {
+        text-align: right;
+    }
+    .firstrow .div3b {
+        text-align: left;
+    }
+}*/
+@media only screen and (min-width: 769px) {
+    .firstrow {
+    padding: 0px 0;
+    }
+    .firstrow .div3a, .firstrow .div3b {
+        text-align: right;
+    }
+}
+nav {
+    width: 90%;
+    height: 100%;
+    padding: 0 5%;
+    left: 0;
+    position: fixed;
+    background-color: orange;
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition: visibility 0s ease 300ms, opacity 300ms;
+    -o-transition: visibility 0s ease 300ms, opacity 300ms;
+    transition: visibility 0s ease 300ms, opacity 300ms ease;
+}
+.navisible {
+    visibility: visible;
+    opacity: 0.9;
+    transition-delay: 0s;
+}
+nav #navicon {
+}
+nav ul {
+    position: relative;
+/*    top: 20px;*/
+    float: right;
+    padding-right: 15px;
+}
+nav ul li {
+    list-style: none;
+    display: block;
+    margin-left: 50px;
+    padding: 20px 5px 2px 0;
+    
+}
+li a {
+    font-family: 'DIN Next Light', sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    color: #999;
+    font-weight: 400;
+    text-decoration: none;
+    -webkit-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+
+li a:hover {
+    color: #222;
+}
+
+/*.feat, .divimg {
+    position: relative;
+    line-height: 0px;
+    overflow: hidden;
+}
+.feat figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0,0,0,0.5);
+    -webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s
+}
+.feat a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.feat figcaption h2 {
+    position: absolute;
+    bottom: 0;
+    padding: 0px 20px;
+    opacity: 0;
+    font-family: 'DIN Next Light', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+.feat figcaption img {
+    position: absolute;
+    width: 24px;
+    right: 0;
+    bottom: 0;
+    padding: 17px 14px;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+	transform: translate3d(-10px,0,0);
+}
+.feat:hover figcaption {
+    opacity: 1;
+    background: rgba(0,0,0,0.5);
+}
+.feat:hover figcaption h2 {
+    opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.feat:hover figcaption img {
+    -webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}*/
+
+@media only screen and (min-width: 481px) {
+}
+
+@media only screen and (min-width: 769px) {
+    header {
+        padding: 34px 0;
+        height: 52px;
+    }
+    .underhead {
+        height: 132px;
+    }
+    .headlogolink img {
+        width: 50px;
+      
+    }
+    nav {
+        width: 85%;
+        left: 15%;
+        padding: 0px 15px 0 0 ;
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+    }
+    nav ul {
+        top: -50px
+    }
+    nav ul li {
+        display: inline;
+        padding: 0;
+    }
+    li a {
+        font-size: 18px;
+        line-height: 24px;
+    }
+/*    .feat figcaption h2 {
+        padding: 5px 25px;
+    }
+    .feat figcaption img {
+    padding: 27px 19px;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+	transform: translate3d(-10px,0,0);
+}*/
+}
+
+/* TYPOGRAPHY */
+/*@font-face {
+	font-family: 'DIN Next Regular';
+	src: url(../fonts/dinregular.eot);
+	src: url(../fonts/dinregular.woff) format('woff'), url(../fonts/dinregular.ttf) format('truetype'), url(../fonts/dinregular.svg) format('svg');
+}
+@font-face {
+	font-family: 'DIN Next Medium';
+	src: url(../fonts/dinmedium.eot);
+	src: url(../fonts/dinmedium.woff) format('woff'), url(../fonts/dinmedium.ttf) format('truetype'), url(../fonts/dinmedium.svg) format('svg');
+}
+@font-face {
+	font-family: 'DIN Next Light';
+	src: url(../fonts/dinlight.eot);
+	src: url(../fonts/dinlight.woff) format('woff'), url(../fonts/dinlight.ttf) format('truetype'), url(../fonts/dinlight.svg) format('svg');
+}
+@font-face {
+	font-family: 'DIN Next UltraLight';
+	src: url(../fonts/dinlight.eot);
+	src: url(../fonts/dinlight.woff) format('woff'), url(../fonts/dinlight.ttf) format('truetype'), url(../fonts/dinlight.svg) format('svg');
+}*/
+
+/*::selection {
+    background: rgba(23,23,23,0.8);
+    color: #fff;
+}
+::-moz-selection {
+    background: rgba(23,23,23,0.8);
+    color: #fff;}
+
+h1 {
+    font-family: 'DIN Next UltraLight', sans-serif;
+    font-size: 20px;
+    line-height: 35px;
+    color: #444444;
+    font-weight: 100;
+    letter-spacing: .3px;
+}
+h2 {
+    font-family: 'DIN Next Regular', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #777777;
+    font-weight: 300;
+}
+h3 {
+    font-family: 'DIN Next Light', sans-serif;
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-weight: 400;
+}
+h4 {
+    font-family: 'DIN Next Light', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-weight: 400;
+}
+p, h3 span {
+    font-family: 'DIN Next Light', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+}
+a {
+    font-family: 'DIN Next Light', sans-serif;
+    color: #777;
+    font-weight: 200;
+    text-decoration: none;
+    -webkit-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}*/
+/*a:hover {
+    color: #222;
+}
+a.active {
+    color: #6192CD;
+}*/
+a.line {
+    font-family: 'DIN Next Regular', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+}
+a.line:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+a.line:hover:after {
+    width: 100%;
+    background-color: #ccc;
+}
+a.line.active:after {
+    width: 20px;
+    background-color: #eee;
+}
+@media only screen and (min-width: 481px) {
+    h1 {
+        font-size: 32px;
+        line-height: 56px;
+        letter-spacing: .5px;
+    }
+    h2 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    h3 {
+        font-size: 12px;
+        line-height: 28px;
+        letter-spacing: 2px;
+    }
+    h4 {
+        font-size: 17px;
+        line-height: 28px;
+        letter-spacing: 3px;
+    }
+    p, h3 span {
+        font-size: 16px;
+        line-height: 28px;
+    } 
+}
+@media only screen and (min-width: 769px) {
+    h1 {
+        font-size: 32px;
+        line-height: 56px;
+        letter-spacing: .5px;
+    }
+    h2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    h3 {
+        font-size: 12px;
+        line-height: 28px;
+        letter-spacing: 2px;
+    }
+    h4 {
+        font-size: 19px;
+        line-height: 28px;
+        letter-spacing: 4px;
+    }
+    p, h3 span {
+        font-size: 18px;
+        line-height: 28px;
+    } 
+}

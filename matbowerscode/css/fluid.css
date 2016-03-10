@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/* CSS Document – All that Fluid Crap */
+
+img, object, embed, video {
+	max-width: 100%;
+}
+
+.ie6 img {
+	width:100%;
+}
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	clear: none;
+	float: none;
+}
+.div1 {
+}
+.div2a {
+width: 100%;
+}
+.div2a:nth-of-type(2n+2) {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+.div2b {
+    width: 49%;
+}
+.div2b:nth-of-type(2n+2) {
+    width: 49%;
+    clear: none;
+    margin-left: 2%;
+}
+.div3a {
+width: 100%;
+}
+.div3_4a {
+width: 100%;
+}
+.div3_5a {
+width: 100%;
+}
+.div3_4b {
+width: 100%;
+}
+.div3_5b {
+width: 100%;
+}
+.zeroMargin_mobile {
+    margin-left: 0;
+}
+.hide_mobile {
+    display: none;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+
+.gridContainer {
+	width: 90%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+.div1 {
+}
+.div2a {
+    width: 49%;
+}
+.div2a:nth-of-type(2n+2) {
+    width: 49%;
+    clear: none;
+    margin-left: 2%;
+}
+.div3a {
+width: 32%;
+}
+.div3b {
+width: 100%;
+}
+.div3a:nth-of-type(3n+2) {
+width: 32%;
+clear: none;
+margin-left: 2%;
+}
+.div3a:nth-of-type(3n+3) {
+width: 32%;
+clear: none;
+margin-left: 2%;
+}
+.div3_4a {
+width: 66%;
+}
+.div3_5a {
+width: 66%;
+clear: none;
+margin-left: 2%;
+}
+.div3_4b {
+width: 100%;
+}
+.div3_5b {
+width: 100%;
+}
+.zeroMargin_tablet {
+    margin-left: 0;
+}
+.hide_tablet {
+    display: none;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 90%;
+	max-width: 1100px;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+.div1 {
+}
+.div2a {
+    width: 49%;
+}
+.div2a:nth-of-type(2n+2) {
+    width: 49%;
+    clear: none;
+    margin-left: 2%;
+}
+.div3a {
+    width: 32%;
+}
+.div3b {
+    width: 32%;
+    clear: none;
+}
+.div3b:nth-of-type(3n+2) {
+width: 32%;
+clear: none;
+margin-left: 2%;
+}
+.div3b:nth-of-type(3n+3) {
+width: 32%;
+clear: none;
+margin-left: 2%;
+}
+.div3_4a {
+width: 66%;
+}
+.div3_5a {
+width: 66%;
+clear: none;
+margin-left: 2%;
+}
+.div3_4b {
+width: 66%;
+}
+.div3_5b {
+width: 66%;
+clear: none;
+margin-left: 2%;
+}
+.zeroMargin_desktop {
+    margin-left: 0;
+}
+.hide_desktop {
+    display: none;
+}
+}
