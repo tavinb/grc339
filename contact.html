@@ -6,45 +6,38 @@
     <title>Tavin Boynton | CONTACT</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
-<!--    <link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
-<!--    <link rel="stylesheet" type="text/css" href="styles/contact/demo.css" />-->
-    <link rel="stylesheet" type="text/css" href="styles/contact/component.css" />
+    <link rel="stylesheet" href="styles/contact/component.css" type="text/css" />
+    <link rel="stylesheet" href="styles/navicon.css" type="text/css">
     <link rel="shortcut icon" href="../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
     <script src="js/contact/modernizr-2.7.1.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
 
-<header id="navbar topbar">
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100" ondragstart="return false;"></a>
-    <div id="navicon">
-      <span></span>
-      <span></span>            
-    </div>
+  <header id="navbar">
+      <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100" ondragstart="return false;"></a>
+      <div id="navicon"><span></span><span></span></div>                    
+      <nav>
+        <ul class="nav">
+          <li><a href="work.html" class="headlink">WORK</a></li>
+          <li><a href="about.html" class="headlink">ABOUT ME</a></li>    
+          <li><a href="resume.html" class="headlink">RESUME</a></li>
+          <li><a href="contact.html" class="current headlink">CONTACT</a></li>          
+          	       
+                     
+        </ul>
+      </nav>        
+  </header>
 
-    <nav>
-      <ul class="nav">
-<!--		<li><a href="work.html" class="headlink animsition-link">WORK</a></li>-->
-        <li><a href="contact.html" class="current headlink">CONTACT</a></li>          
-        <li><a href="resume.html" class="headlink">RESUME</a></li>	       
-        <li><a href="about.html" class="headlink">ABOUT ME</a></li>
-        <li><a href="work.html" class="headlink">WORK</a></li>
-
-
-      </ul>
-    </nav>
-<!--			<div id="marginwidth" style="height:0;"></div>-->
-
-</header>
-
-<!--<h1 class="page-title">CONTACT</h1>-->
+<h1 class="page-title show-title">CONTACT</h1>
 
 <!--begin contact content-->
 
-<div class="contact-form">
+<!--<div class="contact-form">-->
 		
 <!--			<section>-->
+<!--
 				<form id="theForm" class="simform" autocomplete="off">
 					<div class="simform-inner">
 						<ol class="questions">
@@ -64,8 +57,10 @@
 								<span><label for="q4">Sunrise or sunset?</label></span>
 								<input id="q4" name="q4" type="text"/>
 							</li>
+-->
 							
-						</ol><!-- /questions -->
+					<!--	</ol> /questions -->
+<!--
 						<button class="submit" type="submit">Send answers</button>
 						<div class="controls">
 							<button class="next"></button>
@@ -75,18 +70,19 @@
 								<span class="number-total"></span>
 							</span>
 							<span class="error-message"></span>
-						</div><!-- / controls -->
-					</div><!-- /simform-inner -->
-					<span class="final-message"></span>
-				</form><!-- /simform -->			
+-->
+					<!--	</div> / controls -->
+					<!--</div> /simform-inner -->
+<!--					<span class="final-message"></span>-->
+				<!--</form> /simform -->			
 <!--			</section>-->
-			
-		</div><!-- /container -->
+
+		<!--</div> /container -->
         <div id="contact-leftbox">
           <h1>Are you...</h1>
-          <h5>Hiring for an internship?</h5>
+          <h5>hiring for an internship?</h5>
           <p>I'm on the lookout for an awesome summer 2016 internship. Let's setup an interview!</p>
-          <h5>Looking for freelance talent?</h5>
+          <h5>looking for freelance talent?</h5>
           <p>I always love helping my community through freelance work. I offer services in:</p>
           <ul>
             <li>Website Creation</li>
@@ -95,12 +91,12 @@
             <li>Photography</li>
             <li>Need something else? Get in touch!</li>
           </ul>
-          <h5>Just saying hi?</h5>
+          <h5>just saying hi?</h5>
           <p>Well, hey! This'll be an amusing read.</p>
         </div>
         
         <div id="contact-rightbox">
-          <h5>I like to think I'm sociable!</h5>
+<!--          <h5>I like to think I'm sociable!</h5>-->
          <ul class="socials">
            <li><a href="https://www.linkedin.com/in/tavinb" target=_blank><img src="assets/icons/social/social-icons_linkedin.png" alt="linkedin-icon" ondragstart="return false;"></a></li>
            <li><a href="https://www.facebook.com/tavin.boynton" target=_blank><img src="assets/icons/social/social-icons_facebook.png" alt="facebook-icon" ondragstart="return false;"></a></li>
@@ -114,8 +110,61 @@
           
         </div>
   
-  <footer>Copyright &copy; 2016 Tavin Boynton</footer>
+<!--  <footer>Copyright &copy; 2016 Tavin Boynton</footer>-->
   
+        		
+      <script type="text/javascript">
+
+              //// Transparent Header
+              //var $logo = $('header');
+              //$(document).scroll(function() {
+              //    $logo.css({backgroundColor: $(this).scrollTop() > 200? "#fff":"transparent"});
+              //});
+
+
+              // Navicon Open
+              $(document).ready(function(){
+                  $('#navicon').click(function(){
+                      $(this).toggleClass('open');
+                  });
+              });
+
+              $(document).ready(function(){
+                  $('.headlink').click(function(){
+                      if ($('nav').hasClass('navisible')) {
+                          $('#navicon').toggleClass('open'); }
+                  });
+              });
+
+              // Mobile Nav Open
+              $(document).ready(function(){
+                  $('#navicon').click(function(){
+                      $('nav').toggleClass('navisible');
+                  });
+              });
+
+              $(document).ready(function(){
+                  $('.headlink').click(function(){
+                      if ($('nav').hasClass('navisible')) {
+                          $('nav').toggleClass('navisible'); }
+                  });
+              });
+
+              // Test iOS
+              $(document).ready(function(){
+                  iOS = false, p = navigator.platform;
+                  if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ) {
+                        iOS = true;
+                  }
+                  if (iOS === true) {
+                      $(".mobiframe").css('display','block')
+                  }
+                  if (iOS === true) {
+                      $(".frame").css('display','none')
+                  }
+              });
+
+        </script>
   
   
 		<script src="js/contact/classie.js"></script>

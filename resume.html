@@ -6,32 +6,24 @@
     <title>Tavin Boynton | RESUME</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/navicon.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
 
-    <header id="navbar topbar">
-      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100" ondragstart="return false;"></a>
-		<div id="navicon">
-		  <span></span>
-		  <span></span>            
-		</div>
-		                       
-		<nav>
-		  <ul class="nav">
-<!--		<li><a href="work.html" class="headlink animsition-link">WORK</a></li>-->
-		    <li><a href="contact.html" class="headlink">CONTACT</a></li>          
-		    <li><a href="resume.html" class="current headlink">RESUME</a></li>	       
-		    <li><a href="about.html" class="headlink">ABOUT ME</a></li>
-            <li><a href="work.html" class="headlink">WORK</a></li>
-		                 
-		          
-		  </ul>
-		</nav>
-<!--			<div id="marginwidth" style="height:0;"></div>-->
-	            
-    </header>
+  <header id="navbar">
+      <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100" ondragstart="return false;"></a>
+      <div id="navicon"><span></span><span></span></div>                    
+      <nav>
+        <ul class="nav">
+          <li><a href="work.html" class="headlink">WORK</a></li>
+          <li><a href="about.html" class="headlink">ABOUT ME</a></li>
+          <li><a href="resume.html" class="current headlink">RESUME</a></li>
+          <li><a href="contact.html" class="headlink">CONTACT</a></li>                           
+        </ul>
+      </nav>        
+  </header>
 
 <!--<h1 class="page-title">RESUME</h1>-->
 
@@ -61,7 +53,7 @@
   <h4>Freelance Web Developer, Graphic Designer and Photographer</h4>
   <h5 class="resume-data">April 2014 - Present</h5>
   <p><em>Projects:</em></p>
-   <ol>
+   <ol id="resume-list">
     <li>Designed a series of logos for sub-brand of Rhythm Traders that appeared on a new line of latin percussion instruments (April 2014)</li>
     <li>Designed Website for "Business to Youth" event at Cal Poly that brought industry leaders to speak on the issue of "millennials in the workforce." (November 2015)</li>
     <li>Created a 250-page book for AIESEC United States in 5 days. Flew to NY to work in their Manhattan office to execute the project and to collaborate with their team. (December 2015)</li>
@@ -120,14 +112,67 @@
 
 <div id="right-bar">
 <img src="assets/images/website-skills-graph.png" alt="skill-chart" ondragstart="return false;">
+<div id="resumebutton"><a href="assets/files/tavin-boynton-resume-jan19.pdf" target=_blank>Download PDF</a></div>
 </div>
-<div id="bluebutton"><a href="assets/files/tavin-boynton-resume-jan19.pdf" target=_blank>Download PDF</a></div>  
   
   
   
 
 
 <!--<footer>Copyright &copy; 2016 Tavin Boynton</footer>-->
+		
+<script type="text/javascript">
+
+      //// Transparent Header
+      //var $logo = $('header');
+      //$(document).scroll(function() {
+      //    $logo.css({backgroundColor: $(this).scrollTop() > 200? "#fff":"transparent"});
+      //});
+
+
+      // Navicon Open
+      $(document).ready(function(){
+          $('#navicon').click(function(){
+              $(this).toggleClass('open');
+          });
+      });
+
+      $(document).ready(function(){
+          $('.headlink').click(function(){
+              if ($('nav').hasClass('navisible')) {
+                  $('#navicon').toggleClass('open'); }
+          });
+      });
+
+      // Mobile Nav Open
+      $(document).ready(function(){
+          $('#navicon').click(function(){
+              $('nav').toggleClass('navisible');
+          });
+      });
+
+      $(document).ready(function(){
+          $('.headlink').click(function(){
+              if ($('nav').hasClass('navisible')) {
+                  $('nav').toggleClass('navisible'); }
+          });
+      });
+
+      // Test iOS
+      $(document).ready(function(){
+          iOS = false, p = navigator.platform;
+          if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ) {
+                iOS = true;
+          }
+          if (iOS === true) {
+              $(".mobiframe").css('display','block')
+          }
+          if (iOS === true) {
+              $(".frame").css('display','none')
+          }
+      });
+
+</script>
 
 </body>
 </html>

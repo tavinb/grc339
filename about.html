@@ -6,35 +6,28 @@
     <title>Tavin Boynton | ABOUT ME</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <link href="styles/navicon.css" rel="stylesheet" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
   
-<header id="navbar topbar">
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100" ondragstart="return false;"></a>
-    <div id="navicon">
-      <span></span>
-      <span></span>            
-    </div>
+  <header id="navbar">
+      <a href="index.html"><img src="assets/images/logo_100.png" alt="logo-100" ondragstart="return false;"></a>
+      <div id="navicon"><span></span><span></span></div>                    
+      <nav>
+        <ul class="nav">
+          <li><a href="work.html" class="headlink">WORK</a></li>
+          <li><a href="about.html" class="current headlink">ABOUT ME</a></li>
+          <li><a href="resume.html" class="headlink">RESUME</a></li>
+          <li><a href="contact.html" class="headlink">CONTACT</a></li>                    
+        </ul>
+      </nav>        
+  </header>
 
-    <nav>
-      <ul class="nav">
-<!--		<li><a href="work.html" class="headlink animsition-link">WORK</a></li>-->
-        <li><a href="contact.html" class="headlink">CONTACT</a></li>          
-        <li><a href="resume.html" class="headlink">RESUME</a></li>	       
-        <li><a href="about.html" class="current headlink">ABOUT ME</a></li>
-        <li><a href="work.html" class="headlink">WORK</a></li>
+<h1 class="page-title show-title">ABOUT ME</h1>
 
-
-      </ul>
-    </nav>
-<!--			<div id="marginwidth" style="height:0;"></div>-->
-
-</header>
-
-<!--<h1 class="page-title">ABOUT ME</h1>-->
-
+  <div id="about-image-box"> <img id="about-img" src="assets/images/about-images/tavin-wen.png" alt="about-image" ondragstart="return false;"/></div>
 <!--begin about me text-->
 <div id="about-text-box">
   <h1 id="about-title">designer/traveler/mountain biker</h1>
@@ -52,8 +45,61 @@
 
 </div>
 
-<!--begin about me image-->
-  <div id="about-image-box"> <img id="about-img" src="assets/images/about-images/tavin-wen.png" alt="about-image" ondragstart="return false;"/></div>
+
+
+		
+	<script type="text/javascript">
+
+      //// Transparent Header
+      //var $logo = $('header');
+      //$(document).scroll(function() {
+      //    $logo.css({backgroundColor: $(this).scrollTop() > 200? "#fff":"transparent"});
+      //});
+
+
+      // Navicon Open
+      $(document).ready(function(){
+          $('#navicon').click(function(){
+              $(this).toggleClass('open');
+          });
+      });
+
+      $(document).ready(function(){
+          $('.headlink').click(function(){
+              if ($('nav').hasClass('navisible')) {
+                  $('#navicon').toggleClass('open'); }
+          });
+      });
+
+      // Mobile Nav Open
+      $(document).ready(function(){
+          $('#navicon').click(function(){
+              $('nav').toggleClass('navisible');
+          });
+      });
+
+      $(document).ready(function(){
+          $('.headlink').click(function(){
+              if ($('nav').hasClass('navisible')) {
+                  $('nav').toggleClass('navisible'); }
+          });
+      });
+
+      // Test iOS
+      $(document).ready(function(){
+          iOS = false, p = navigator.platform;
+          if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ) {
+                iOS = true;
+          }
+          if (iOS === true) {
+              $(".mobiframe").css('display','block')
+          }
+          if (iOS === true) {
+              $(".frame").css('display','none')
+          }
+      });
+
+</script>
 
 <script>
 
