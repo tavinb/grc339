@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tavin Boynton | ABOUT ME</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <link href="/css/navicon.css" rel="stylesheet" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+  
+  <header id="navbar">
+      <a href="/index.html"><img src="/assets/images/logo_100_gray.svg" alt="logo-100" ondragstart="return false;"></a>
+      <div id="navicon"><span></span><span></span></div>                    
+      <nav>
+        <ul class="nav">
+          <li><a href="/work.html" class="current headlink">WORK</a></li>
+          <li><a href="/about.html" class="headlink">ABOUT ME</a></li>
+          <li><a href="/resume.html" class="headlink">RESUME</a></li>
+          <li><a href="/contact.html" class="headlink">CONTACT</a></li>                    
+        </ul>
+      </nav>        
+  </header>
+
+<!--
+  <div class="mainframe">
+  <a href="/work.html"><img src="/assets/icons/ic_close_48pt_3x.png" id="closebutton" alt="close-button" width="48"></a>
+  <h2>Bossa Nova</h2>
+  </div>
+-->
+    <a href="/work.html"><img src="/assets/icons/ic_close_48pt_3x.png" id="closebutton" alt="close-button" width="48"></a>
+  <div class="mainframe" style="background-color: #e3e3e1;">
+  <img src="/assets/images/work-images/mainframe-images/mainframe-typecal.png" id="mainframe-image" alt="typecal-mainframe">
+<!--  <img src="/assets/images/work-images/mainframe-images/highway1_4-print_small.jpg" id="mainframe-image" alt="highway1-mainframe" >-->
+  
+  </div>
+ 
+  <div class="bigwhitebox">
+    <h2 id="project-title">Type Calendar</h2>
+    <div class="metadata">
+     <h5>Spring 2014</h5>
+     <h5>Client: Rhythm Traders</h5>
+     <h5>Built with Adobe Illustrator</h5>
+    </div>
+   
+<div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-calendar-1.jpg" alt="calendar-1" class="descriptiontall">   
+    <p class="introtext">
+     Custom 13-month calendar design featuring original typography and photography. After the design was finalized, I imposed it using professional imposition software.
+   </p>
+</div>
+<div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-calendar-2.jpg" alt="calendar-2" class="descriptiontall">
+</div>
+   
+  </div>
+    
+    
+    
+
+		
+	<script type="text/javascript">
+
+      //// Transparent Header
+      //var $logo = $('header');
+      //$(document).scroll(function() {
+      //    $logo.css({backgroundColor: $(this).scrollTop() > 200? "#fff":"transparent"});
+      //});
+
+
+      // Navicon Open
+      $(document).ready(function(){
+          $('#navicon').click(function(){
+              $(this).toggleClass('open');
+          });
+      });
+
+      $(document).ready(function(){
+          $('.headlink').click(function(){
+              if ($('nav').hasClass('navisible')) {
+                  $('#navicon').toggleClass('open'); }
+          });
+      });
+
+      // Mobile Nav Open
+      $(document).ready(function(){
+          $('#navicon').click(function(){
+              $('nav').toggleClass('navisible');
+          });
+      });
+
+      $(document).ready(function(){
+          $('.headlink').click(function(){
+              if ($('nav').hasClass('navisible')) {
+                  $('nav').toggleClass('navisible'); }
+          });
+      });
+
+      // Test iOS
+      $(document).ready(function(){
+          iOS = false, p = navigator.platform;
+          if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ) {
+                iOS = true;
+          }
+          if (iOS === true) {
+              $(".mobiframe").css('display','block')
+          }
+          if (iOS === true) {
+              $(".frame").css('display','none')
+          }
+      });
+
+</script>
+
+<!--<footer>Copyright &copy; 2016 Tavin Boynton</footer>-->
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tavin Boynton | ABOUT ME</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <link href="/css/navicon.css" rel="stylesheet" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+  
+  <header id="navbar">
+      <a href="/index.html"><img src="/assets/images/logo_100_gray.svg" alt="logo-100" ondragstart="return false;"></a>
+      <div id="navicon"><span></span><span></span></div>                    
+      <nav>
+        <ul class="nav">
+          <li><a href="/work.html" class="current headlink">WORK</a></li>
+          <li><a href="/about.html" class="headlink">ABOUT ME</a></li>
+          <li><a href="/resume.html" class="headlink">RESUME</a></li>
+          <li><a href="/contact.html" class="headlink">CONTACT</a></li>                    
+        </ul>
+      </nav>        
+  </header>
+
+<!--
+  <div class="mainframe">
+  <a href="/work.html"><img src="/assets/icons/ic_close_48pt_3x.png" id="closebutton" alt="close-button" width="48"></a>
+  <h2>Bossa Nova</h2>
+  </div>
+-->
+    <a href="/work.html"><img src="/assets/icons/ic_close_48pt_3x.png" id="closebutton" alt="close-button" width="48"></a>
+  <div class="mainframe" style="background-color: #e9e9e9;">
+  <img src="/assets/images/work-images/mainframe-images/mainframe-applewatch.png" id="mainframe-image" alt="applewatch-mainframe" width="1000">
+<!--  <img src="/assets/images/work-images/mainframe-images/highway1_4-print_small.jpg" id="mainframe-image" alt="highway1-mainframe" >-->
+  
+  </div>
+ 
+  <div class="bigwhitebox">
+    <h2 id="project-title">Apple Watch Stock Collection</h2>
+    <div class="metadata">
+     <h5>Fall 2015 &ndash; Present</h5>
+    </div>
+   
+<div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-applewatch-1.jpg" alt="desc-applewatch-1" class="descriptionwide" ondragstart="return false;">
+    <p class="introtext">
+      Hired by eCommerce company to formulate brand direction of Apple Watches to differentiate their products.
+    </p>
+    <p class="descriptiontext">
+    First, did market research to see what competitors’ images looked like, including both professional stock imagery and amatuer ebay footage.
+    </p>    
+</div>
+
+<div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-applewatch-2.jpg" alt="desc-applewatch-2" class="descriptionwide" ondragstart="return false;">
+   <p class="descriptiontext">
+     Next, I created moodboards of traditional watches at similar price-points to mimic successful photo techniques and to give my client options of different directions to take his products.
+   </p>
+</div>
+<div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-applewatch-3.jpg" alt="desc-applewatch-3" class="descriptionwide" ondragstart="return false;">
+   <p class="descriptiontext">
+     With my knowledge, I experimented in different environments.
+     <br><br>
+     I landed on sophisticated look for standard Watch, something businessmen and students could use to enhance their life.
+   </p>
+  </div>
+  <div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-applewatch-4.jpg" alt="desc-applewatch-4" class="descriptionwide" ondragstart="return false;">
+  </div>
+  <div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-applewatch-5.jpg" alt="desc-applewatch-5" class="descriptionwide" ondragstart="return false;">
+   <p class="descriptiontext">
+     The Sport Watch, in contrast, demanded a rugged, lifestyle look. It is meant to be worn in whatever situation life throws at you. It can handle the wild.
+   </p>
+  </div>
+    <div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-applewatch-6.jpg" alt="desc-applewatch-6" class="descriptionwide" ondragstart="return false;">
+   <p class="descriptiontext">
+     In the end, the following two styles won out, and going forward these themes have been used to create a consistent brand for this business.
+   </p>
+  </div>
+  <div class="description">
+   <img src="/assets/images/work-images/desc-images/desc-applewatch-9.jpg" alt="desc-applewatch-7" class="descriptionwide" ondragstart="return false;">
+  </div>
+   
+  </div>
+    
+    
+    
+
+		
+	<script type="text/javascript">
+
+      //// Transparent Header
+      //var $logo = $('header');
+      //$(document).scroll(function() {
+      //    $logo.css({backgroundColor: $(this).scrollTop() > 200? "#fff":"transparent"});
+      //});
+
+
+      // Navicon Open
+      $(document).ready(function(){
+          $('#navicon').click(function(){
+              $(this).toggleClass('open');
+          });
+      });
+
+      $(document).ready(function(){
+          $('.headlink').click(function(){
+              if ($('nav').hasClass('navisible')) {
+                  $('#navicon').toggleClass('open'); }
+          });
+      });
+
+      // Mobile Nav Open
+      $(document).ready(function(){
+          $('#navicon').click(function(){
+              $('nav').toggleClass('navisible');
+          });
+      });
+
+      $(document).ready(function(){
+          $('.headlink').click(function(){
+              if ($('nav').hasClass('navisible')) {
+                  $('nav').toggleClass('navisible'); }
+          });
+      });
+
+      // Test iOS
+      $(document).ready(function(){
+          iOS = false, p = navigator.platform;
+          if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ) {
+                iOS = true;
+          }
+          if (iOS === true) {
+              $(".mobiframe").css('display','block')
+          }
+          if (iOS === true) {
+              $(".frame").css('display','none')
+          }
+      });
+
+</script>
+
+<!--<footer>Copyright &copy; 2016 Tavin Boynton</footer>-->
+
+</body>
+</html>

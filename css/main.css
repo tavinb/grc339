@@ -2,14 +2,13 @@
 @charset "UTF-8";
 
 body {
-    font-family: helvetica, sans-serif;
+    font-family: "myriad-pro", myriad, helvetica, sans-serif;
     background-repeat: repeat;
     overflow-y: scroll; /* or auto */
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 p {
   font-size: 1em;
 }
@@ -29,7 +28,8 @@ a.current {
 }
 
 .page-title {
-  font-family: 'Raleway', helvetica, sans-serif;
+  font-family: "myriad-pro", helvetica, sans-serif;
+/*  font-family: 'Raleway', helvetica, sans-serif;*/
   font-size: 4em;
   text-align: center;
   margin: 0 auto 0 auto;
@@ -45,52 +45,120 @@ footer {
   text-align: center;
   clear: both;
 }
-::-moz-selection { /* Code for Firefox */
-    background: #6d6d6d;
-}
-
 ::selection {
-    background: #6d6d6d;
+    background: #bbb;
 }
-
-
-/* end general page styling */
+::-moz-selection {  /* Code for Firefox */
+    background: #bbb;
+} /* end general page styling */
 
 /* begin navbar styling */
+@media only screen and (min-width: 769px) {
+    header {
+      background-color: #fff;
+      height: 110px;
+    }
+    header img {
+      float: left;
+      width: 100px;
+      margin: 6px 0 0 6px;
+    }
 
+    .firstrow {
+      padding: 0;
+    }
+    .firstrow .div3a, .firstrow .div3b {
+      text-align: right;
+    }
+    nav {
+      width: 100%;
+      height: 100%;
+      padding: 10% 0 0 0;
+      left: 0;
+      position: fixed;
+      visibility:hidden;
+      opacity:0;
+      -webkit-transition: visibility 0s ease 300ms, opacity 300ms;
+      -o-transition: visibility 0s ease 300ms, opacity 300ms;
+      transition: visibility 0s ease 300ms, opacity 300ms ease;
+    }
+    nav a:hover {
+      padding-bottom: 5px;
+      border-bottom: 4px solid #28b6e4;
+    }
+    nav #navicon {
+    }
+    nav ul {
+      position: relative;
+      float: right;
+      margin-top: -30px;
+    }
 
+    nav li {
+    /*    display: inline-block;*/
 
-/*end navbar styling*/
+      list-style: none;
+    /*    float: right;*/
+      margin: -15px 20px 0 20px;
+      padding: 5px 0 0 50%;
+      font-weight: 400;
+      color: #000;
+    }
+  
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+@media only screen and (min-width: 769px) {
+    nav {
+      float: right;
+      padding: 0px 0px 0 0 ;
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+    }
+    nav ul {
+      top: -30px;
+    }
+    nav ul li {
+      display: inline;
+      padding: 0;
+    }
+    li a {
+      font-size: 18px;
+    }
+} /*end all navbar styling*/
 
 
 
 /* BEGIN INDEX PAGE STYLING */
 #index-cover-photo {
-  background: url(../assets/images/tavin-croatia.jpg) no-repeat left center;
+  background: url(../assets/images/tavin-croatia.jpg) no-repeat left;
   margin: 0;
   height: 800px;
-
+/*  background-color: lightcoral;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .vert-text {
-  margin: 5% 27% 0 27%;
+  margin: 25% auto 0 auto;
+  width: 50%;
 }
 .vert-text h1 {
   text-align: center;
-  font-family: 'Raleway', helvetica, sans-serif;
+  font-family: "myriad-pro", helvetica, sans-serif;
+/*  font-family: 'Raleway', helvetica, sans-serif;*/
   font-weight: 500;
   font-size: 21em;
   opacity: 0.7;
 }
 .vert-text h4 {
   text-align: center;
-  font-family: 'Raleway', helvetica, sans-serif;
+  font-family: "myriad-pro", helvetica, sans-serif;
+/*  font-family: 'Raleway', helvetica, sans-serif;*/
   font-weight: 500;
   font-size: 2em;
-  color: #fff;
+  color: #000;
   opacity: 1.0;
 }
 .call-to-action {
@@ -243,9 +311,11 @@ button:focus {
   height: 466px;
   width: 416px;;
   float: right;
-  -ms-transform: rotate(7deg); /* IE 9 */
-  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+/*
+  -ms-transform: rotate(7deg);  IE 9 
+  -webkit-transform: rotate(7deg);  Chrome, Safari, Opera 
   transform: rotate(7deg);
+*/
 }
 /* END ABOUT PAGE STYLING */
 
@@ -253,6 +323,7 @@ button:focus {
 /* BEGIN RESUME PAGE STYLING */
 #resume-lefttext {
   float: left;
+  clear: left;
   margin: 2.5% 0 5% 5%;
   width: 60%;
 }
@@ -296,6 +367,7 @@ button:focus {
   margin: 8% 0 0 15%;
 }
 #resumebutton {
+  float: left;
   text-align: center;
   font-size: 1.2em;
   width: 220px;
@@ -304,7 +376,7 @@ button:focus {
   border-radius: 8px;
   border: 2px solid #28b6e4;
   opacity: 1;
-  margin: 50px 0 0 auto;
+  margin: 50px 0 0 5%;
   padding: 13px 5px 15px 5px;
 }
 #resumebutton:hover {
@@ -372,11 +444,11 @@ label {
 }
 /* END CONTACT PAGE STYLING */
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
-/* BEGIN INDIVIDUAL WORK PORTFOLIO PAGES */
+/* BEGIN Project PAGES */
 .mainframe {
-  margin: 0 0 0 0;
+  margin: -10% 0 0 0;
   width: 100%;
-/*  height: 450px;*/
+/*  height: 800px;*/
   background-color: #e9e9e9;
   
 /*  clip: rect(0px,60px,200px,0px);*/
@@ -387,25 +459,27 @@ label {
 #mainframe-image {
 /*    clip: rect(300px, 100% 0 100%);*/
 /*    height: 450px;*/
-/*    width: 100%;*/
+    width: 100%;
 /*    margin-top: -5%;*/
-      margin: 0 auto 0 7.9%;
+    margin: 0 auto 0 auto;
 /*    z-index: 5;*/
 }
 
 #project-title {
 /*  position: relative;*/
   margin-left: 1.75%;
-  margin-top: -2.8%;
-  font-family: 'Raleway', Myriad-Pro, Helvetica, sans-serif;
+  margin-top: 0px;
+  font-family: "myriad-pro", helvetica, sans-serif;
+/*  font-family: 'Raleway', Helvetica, sans-serif;*/
   font-size: 3.5em;
 /*  z-index: 10;*/
 }
 .bigwhitebox {
-  box-shadow: 0px 8px 40px #000;
+  box-shadow: 0px 10px 30px #666;
 /*  box-shadow: 30px none 5px 5px #000;*/
   margin: 36% 0 0 0;
   padding-top: 10px;
+  padding-bottom: 15%;
   width: 100%;
   height: cover;
   position: static;
@@ -415,6 +489,9 @@ label {
   margin: 2% 0 0 5%;
   font-weight: bold;
 }
+.metadata a {
+  text-decoration: underline;
+}
 
 .description {
   margin-top: 0px;
@@ -423,160 +500,70 @@ label {
   height: 300px;
 }
 
+.introtext {
+  float: left;
+  margin: 2% 0 0 5%;
+  font-weight: 600;
+  font-size: 1.2em;
+  line-height: 1.5;
+  width: 40%;
+}
 .descriptiontext {
   float: left;
-  margin: 7% 0 0 5%;
+  margin: 5% 0 0 5%;
   line-height: 1.5;
   width: 40%;
 }
 
-.descriptionimg {
+
+.descriptionwide {
   float: right;
-  margin: 0 5% 0 0;
-  height: 250px;
-  width: 30%;
+  clear: both;
+  margin: 2% 5% 0 0;
+  height: auto;
+  width: 375px;
+/*  width: 30%;*/
   background-color: #1a9ad6;
+  clear: both;
+}
+
+.descriptiontall {
+  float: right;
+  margin: 2% 5% 0 0;
+/*  padding-bottom: 100px;*/
+  height: auto;
+  width: 250px;
+/*  width: 30%;*/
+  background-color: #1a9ad6;
+  clear: both;
+}
+
+.descriptionsquare {
+  float: right;
+  margin: 5% 5% 0 0;
+  height: auto;
+  width: 250px;
+  clear: both;
 }
 
 #closebutton {
-  position: fixed;
+  position: absolute;
+  float: right;
   right: 15px;
+  margin-right: 0;
   padding-top: 15px;
 /*  margin-right: 5%;*/
 /*  z-index: -2;*/
 }
-
+@media screen and (min-width: 769px) {
+  
 #closebutton:hover {
  opacity: 50%;
  background-color: white;
 }
-
+}
 /* END INDIVIDUAL WORK PORTFOLIO PAGES */
 
-
-/* /////////////////////////////////////////////////////////////////////////////////////////// */
-@media only screen and (min-width: 769px) {
-header {
-/*    z-index: 1;*/
-    height: 110px;
-}
-header img {
-    float: left;
-    width: 100px;
-    margin: 6px 0 0 6px;
-}
-  header img:hover {
-    opacity: 0.85;
-  }
-
-  
-.firstrow {
-padding: 0;
-}
-.firstrow .div3a, .firstrow .div3b {
-    text-align: right;
-}
-
-nav {
-    width: 100%;
-    height: 100%;
-    padding: 10% 0 0 0;
-    left: 0;
-    position: fixed;
-/*    background-color: green;*/
-    visibility:hidden;
-    opacity:0;
-    -webkit-transition: visibility 0s ease 300ms, opacity 300ms;
-    -o-transition: visibility 0s ease 300ms, opacity 300ms;
-    transition: visibility 0s ease 300ms, opacity 300ms ease;
-}
-/*
-.navisible {
-    visibility: visible;
-    opacity: 0.98;
-    z-index: 1;
-    transition-delay: 0.0s;
-}
-*/
-nav a:hover {
-    padding-bottom: 5px;
-    border-bottom: 4px solid #28b6e4;
-}
-nav #navicon {
-}
-nav ul {
-    position: relative;
-    float: right;
-    margin-top: -30px;
-}
-
-nav li {
-/*    display: inline-block;*/
-  
-    list-style: none;
-/*    float: right;*/
-    margin: -15px 20px 0 20px;
-    padding: 5px 0 0 50%;
-    font-weight: 400;
-    color: #000;
-}
-  
-} /* ends media query for tablet/desktop, just for resume pg for now */
-
-
-/* /////////////////////////////////////////////////////////////////////////////////////////// */
-/*
-@media only screen and (min-width: 481px) {
-}
-*/
-
-
-/* /////////////////////////////////////////////////////////////////////////////////////////// */
-@media only screen and (min-width: 769px) {
-/*this set of stuff seems to be really working */
-  /*
-    header {
-      
-        height: 105px;
-    }
-*/
-  
-/*
-  header img {
-    float: left;
-  }
-*/
-/*
-    .underhead {
-        height: 132px;
-    }
-*/
-/*
-    .headlogolink img {
-        width: 50px;
-      
-    }
-*/
-    nav {
-        float: right;
-        padding: 0px 0px 0 0 ;
-        position: relative;
-        visibility: visible;
-        opacity: 1;
-/*        background-color: #fff;*/
-    }
-    nav ul {
-        top: -30px;
-    }
-    nav ul li {
-        display: inline;
-        padding: 0;
-    }
-    li a {
-        font-size: 18px;
-    }
-
-}
 
 
 
@@ -664,14 +651,16 @@ width: 85%;
 }
 .vert-text h1 {
 text-align: center;
-font-family: 'Raleway', helvetica, sans-serif;
+font-family: "myriad-pro", helvetica, sans-serif;
+/*font-family: 'Raleway', helvetica, sans-serif;*/
 font-weight: 500;
 font-size: 10em;
 opacity: 0.7;
 }
 .vert-text h4 {
 text-align: center;
-font-family: 'Raleway', helvetica, sans-serif;
+font-family: "myriad-pro", helvetica, sans-serif;
+/*font-family: 'Raleway', helvetica, sans-serif;*/
 font-weight: 500;
 font-size: 1.5em;
 color: #000;
@@ -681,7 +670,8 @@ opacity: 1;
 
 /* BEGIN MOBILE WORK PAGE STYLING */
 .page-title {
-font-family: 'Raleway', helvetica, sans-serif;
+font-family: "myriad-pro", helvetica, sans-serif;
+/*font-family: 'Raleway', helvetica, sans-serif;*/
 font-size: 4em;
 text-align: center;
 margin: 5% auto 0 auto;
@@ -786,6 +776,105 @@ button:focus {
   
 /* END MOBILE WORK PAGE STYLING */
   
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* BEGIN MOBILE PROJECT PAGES */
+.mainframe {
+  margin: -10% 0 0 0;
+  width: 100%;
+/*  height: 800px;*/
+/*  background-color: #e9e9e9;*/
+  
+/*  clip: rect(0px,60px,200px,0px);*/
+  position: fixed;
+  z-index: -1;
+/*  background-size: cover;*/
+}
+#mainframe-image {
+/*    clip: rect(300px, 100% 0 100%);*/
+/*    height: 450px;*/
+    width: 100%;
+/*    margin-top: -5%;*/
+    margin: 0% auto 0 auto;
+/*    z-index: 5;*/
+}
+
+#project-title {
+/*  position: relative;*/
+  margin-left: 1.75%;
+  margin-top: 0px;
+  font-family: "myriad-pro", Helvetica, sans-serif;
+  font-size: 3.5em;
+/*  z-index: 10;*/
+}
+.bigwhitebox {
+  box-shadow: 0px 10px 30px #666;
+/*  box-shadow: 30px none 5px 5px #000;*/
+  margin: 36% 0 0 0;
+  padding-top: 10px;
+  width: 100%;
+  height: auto;
+/*  position: static;*/
+  background-color: #fff;
+}
+.metadata {
+  margin: 0% 0 3% 5%;
+}
+.metadata a {
+  text-decoration: underline;
+}
+.description {
+  margin-top: 0px;
+  margin-bottom: 0;
+  padding: 0;
+  height: 300px;
+}
+
+.introtext {
+  margin: 1% 0 0 0%;
+  font-weight: 600;
+  font-size: 1.2em;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.descriptiontext {
+  margin: 1% 0 5% 0%;
+  width: 100%;
+}
+
+
+.descriptionwide {
+  clear: both;
+  margin: 5% 0 0 0;
+  height: auto;
+  width: 100%;
+/*  width: 30%;*/
+  background-color: #1a9ad6;
+}
+
+.descriptiontall {
+  float: right;
+  margin: 0 5% 0 0;
+  height: auto;
+  width: 250px;
+/*  width: 30%;*/
+  background-color: #1a9ad6;
+}
+
+#closebutton {
+  position: absolute;
+  float: right;
+  right: 2.75%;
+  margin-right: 0;
+  padding-top: 15px;
+/*  margin-right: 5%;*/
+/*  z-index: -2;*/
+}
+
+
+/* END MOBILE PROJECT PAGES */  
+  
+  
 /* BEGIN MOBILE ABOUT PAGE STYLING */
 #about-text-box {
   margin: 0 0 5% 0;
@@ -821,9 +910,11 @@ button:focus {
   padding-top: 10%;
   height: 70%;
   width: 70%;
-  -ms-transform: rotate(7deg); /* IE 9 */
-  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-  transform: rotate(7deg);
+/*
+  -ms-transform: rotate(7deg);  IE 9 
+  -webkit-transform: rotate(7deg);  Chrome, Safari, Opera 
+  transform: rotate(7deg);*/
+
 }
 /* END MOBILE ABOUT PAGE STYLING */
 
